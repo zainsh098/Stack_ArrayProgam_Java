@@ -3,6 +3,7 @@ public class StackArray {
 
     private  int[] stack;
     private  int top;
+    private  int lastInput;
 
     public  StackArray(int size)
     {
@@ -13,12 +14,11 @@ public class StackArray {
     }
     public  void pushNumber(int num)
     {
-        if(isFull())
-        {
-            System.out.println("Stack is Full");
+        if (isFull()) {
+            System.out.println("Stack is Full. Last input: " + lastInput);
             return;
-
         }
+        lastInput = num;
         stack[++top]=num;
 
 
@@ -46,7 +46,7 @@ public class StackArray {
 
     public  void printStack()
     {
-        for (int i=top;i>0;i--)
+        for (int i=top;i>=0;i--)
         {
             System.out.println(stack[i]);
 

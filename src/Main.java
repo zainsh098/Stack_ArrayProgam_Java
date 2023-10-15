@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
@@ -15,15 +14,21 @@ public class Main {
 
 
 
-        for (int i=0;i<=stackSize;i++)
+        for (int i=1;i<=stackSize;i++)
         {
             stackArray.pushNumber(inputStackNumber.nextInt());
 
 
         }
+       int popNumbers= stackArray.pop();
 
+        System.out.println("The Stack Numbers are:\n" );
 
         stackArray.printStack();
+
+
+        System.out.println("The Pop Elements Are :");
+        System.out.println(popNumbers);
 
 
 
