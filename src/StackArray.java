@@ -1,7 +1,7 @@
 
 public class StackArray {
 
-    private  int[] stack;
+    private final int[] stack;
     private  int top;
     private  int lastInput;
 
